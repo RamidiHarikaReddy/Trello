@@ -1,0 +1,21 @@
+{
+  "name": "sample_require",
+  "dependencies": {
+    "csso": "~1.7.0",
+    "docco": "~0.7.0",
+    "finalhandler": "~0.4.1",
+    "fs-extra": "~0.24.0",
+    "fs-sync": "~1.0.2",
+    "jsdoc": "^3.6.6",
+    "less": "~1.7.5",
+    "node": "^15.4.0",
+    "serve": "^11.3.2",
+    "serve-static": "^1.14.1",
+    "server.js": "^1.0.0",
+    "shelljs-nodecli": "~0.1.1",
+    "underscore": "^1.12.0"
+  },
+  "scripts": {
+    "serve": "node server.js"
+  }
+}
