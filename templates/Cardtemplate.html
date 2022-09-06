@@ -1,0 +1,25 @@
+<section class="card" data-id="<%= listID %>">
+    <% _.each(cards, function(card){ %>
+    <div draggable="true" class="card-body" data-id="<%= card.id %>">
+        <span class="cardText"><%= card.text %></span>
+        <span class="cardbuttons">
+            <i class="fas fa-trash-alt delete"></i>
+            <i class="fas fa-pencil-alt edit"></i>
+        </span>
+        <div class="editCard">
+            <textarea name="cardContent" id="cardContent" cols="35" rows="4"><%= card.text %></textarea>
+            <div class="cardActions">
+                <button type="button" class="btn btn-success" id="save">Save</button>
+            </div>
+        </div>
+    </div>
+    <% }); %>
+    <button class="add-card-btn btn">Add a card</button>
+    <div class="cardComposer">
+            <textarea name="cardContent" id="cardContent" cols="35" rows="4"></textarea>
+            <div class="cardActions">
+                <button type="button" class="btn btn-success addCard">Add Card</button>
+                <i type="button" class="fa fa-times cancelCard" id="cancelCard" aria-hidden="true"></i>
+            </div>
+        </div>
+</section>

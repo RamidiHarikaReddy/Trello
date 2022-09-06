@@ -1,0 +1,61 @@
+<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					  <span class="sr-only">Toggle navigation</span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<div class="navbar-form navbar-left">
+					<button class="btn btn-default" id="home"><i class="fas fa-home"></i></button>
+					<button class="btn btn-default boards-btn"><i class="fab fa-trello boards-btn-icon"></i> Boards</button>
+				</div>
+				<a class="navbar-brand" href="#">Trello</a>
+				<div class="navbar-nav navbar-right">
+					<li class="dropdown">
+						<button class=" btn dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-plus"></i></button>
+						<ul class="dropdown-menu">
+							<li><span class="dropdown-header">Create <i class="fa fa-times close" aria-hidden="true"></i></span></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#" data-toggle="modal" data-target=".bd-example-modal-sm">Create boards</a></li>
+							<li><a href="#">Create Team</a></li>
+						</ul>
+					</li>
+					<li><button class="img-circle">HR</button></li>	
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="boardModal">
+		<div class="modal-dialog modal-sm createBoardModal">
+			<div class="modalContent">
+				<div class="modalForm">
+					<div class="modalInput">
+						<input type="text" placeholder="Add board title" id="boardInput">
+						<button class="fa fa-times closeModal"></button>
+					</div>
+					Trello Workspace
+					<div>
+						<button class="btn visibilityDropdown" type="button" data-toggle="collapse" data-target="#visibilityOptions" aria-expanded="false" aria-controls="visibilityOptions">
+							<span><i class="fas fa-user-friends"></i>  Team</span> <i class="fas fa-chevron-down"></i>
+						</button>
+					</div>
+				</div>
+				<div class="collapse" id="visibilityOptions">
+						<a class="list-group-item" id="private"> <span><i class="fa fa-lock" aria-hidden="true"></i>  Private</span>
+							<div>Only board members can see and edit this board</div>
+						</a>
+						<a class="list-group-item" id="public"> <span><i class="fas fa-user-friends"></i>  Team</span>
+							<div>All members of the trello workspace team can see and edit this board</div>
+						</a>
+						<a class="list-group-item" id="team"> <span><i class="fa fa-globe" aria-hidden="true"></i>  Public </span>
+							<div>Anyone on the internet (including Google) can see this board. Only board members can edit.</div>
+						</a>
+					</div>
+			<button class="btn" id="createBoard">Create Board</button>
+			</div>
+		</div>
+	</div>

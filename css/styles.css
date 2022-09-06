@@ -1,0 +1,362 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-y: scroll !important;
+    background-image: url('../images/Trello_Bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: black;
+}
+
+:focus {
+    outline-color: black;
+}
+
+.close{
+    float: right;
+}
+
+.board-info-bar {
+    padding: 0 2rem;
+    color: #f6f6f6;
+}
+
+.board-controls {
+    display: flex;
+}
+
+.board-controls .btn {
+    margin-right: 1rem;
+}
+
+.board-controls .btn:last-of-type {
+    margin-right: 0;
+}
+
+.board-info-bar .btn {
+    font-size: 1.4rem;
+    font-weight: 400;
+    transition: background-color 150ms;
+    padding: 0 0.6rem;
+    border-radius: 0.3rem;
+}
+
+.board-info-bar .btn:hover {
+    background-color: #006aa8;
+}
+
+.private-btn-icon,
+.menu-btn-icon {
+    padding-right: 0.6rem;
+    white-space: nowrap;
+}
+
+.private-btn,
+.star-btn,
+.board-title{
+    background: none;
+    border: none;
+    color: inherit;
+}
+
+.board-title h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Lists */
+
+.lists-container::-webkit-scrollbar {
+    height: 2.4rem;
+}
+
+.lists-container::-webkit-scrollbar-thumb {
+    background-color: #66a3c7;
+    border: 0.8rem solid #0079bf;
+    border-top-width: 0;
+}
+
+.lists-container {
+    display: flex;
+    align-items: start;
+    padding: 0 0.8rem 0.8rem;
+    overflow-x: auto;
+    height: calc(100vh - 8.6rem);
+}
+
+.list {
+    flex: 0 0 27rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #e2e4e6;
+    max-height: calc(100vh - 11.8rem);
+    border-radius: 0.3rem;
+    margin-right: 1rem;
+}
+
+.list:last-of-type {
+    margin-right: 0;
+}
+
+.list-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    padding: 1rem;
+}
+
+.list-items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    padding: 0 0.6rem 0.5rem;
+    overflow-y: auto;
+}
+
+.list-items::-webkit-scrollbar {
+    width: 1.6rem;
+}
+
+.list-items::-webkit-scrollbar-thumb {
+    background-color: #c4c9cc;
+    border-right: 0.6rem solid #e2e4e6;
+}
+
+.list-items li {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.3;
+    background-color: #fff;
+    padding: 0.65rem 0.6rem;
+    color: #4d4d4d;
+    border-bottom: 0.1rem solid #ccc;
+    border-radius: 0.3rem;
+    margin-bottom: 0.6rem;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.list-items li:last-of-type {
+    margin-bottom: 0;
+}
+
+.list-items li:hover {
+    background-color: #eee;
+}
+
+.add-card-btn {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #838c91;
+    padding: 1rem;
+    text-align: left;
+    cursor: pointer;
+    margin: 2%;
+    background-color: inherit;
+}
+
+.add-card-btn:hover {
+    background-color: #cdd2d4;
+    color: #4d4d4d;
+    text-decoration: underline;
+}
+
+.add-list-btn {
+    flex: 0 0 27rem;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    background-color: #006aa7;
+    color: #a5cae0;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 150ms;
+    text-align: left;
+}
+
+.add-list-btn:hover {
+    background-color: #005485;
+}
+
+.add-card-btn::after,
+.add-list-btn::after {
+    content: '...';
+}
+
+.edit, .delete{
+    float: right;
+    right: 3%;
+    margin: 1%;
+}
+
+.card-body{
+    display: block;
+    padding: 2%;
+    margin: 2%;
+    background-color: white;
+}
+
+.editCard{
+    display: none;
+    border: none;
+}
+
+.addCard{
+    padding: 1%;
+}
+
+.cancelCard{
+    margin-left: 2%;
+    font-size: x-large;
+}
+
+.cardActions{
+    padding: 1%;
+    display: flex;
+    margin: 1%;
+}
+
+#cardContent,
+#listName,
+.card-body{
+    box-shadow:0 1px 0 rgb(9 30 66 / 25%);
+    border: 1px solid transparent;
+    border-radius: 3%;
+}
+
+#cardContent{
+    width: 100%;
+}
+
+.cardComposer{
+    display: none;
+}
+
+#listName{
+    width: 96%;
+    padding: 2%;
+    margin: 2%;
+}
+.listoptions{
+    float: right;
+}
+
+.cardbuttons{
+    visibility: hidden;
+}
+
+.card-body:hover .cardbuttons{
+    visibility: visible;
+}
+
+.listoptionsDropdown{
+    float: right;
+    left: 40%;
+    top: 80%;
+}
+
+#visibilityOptions{
+  position: absolute;
+  margin: 0 3%;
+}
+
+.listComposer{
+    display: none;
+}
+
+.editlistName{
+    display: none;
+}
+
+.boards{
+    flex: 0 0 27rem;
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+}
+
+.homePageMiddleContainer{
+    margin: 20px auto;
+    width: 55%;
+    padding: 12px 18px;
+}
+
+.boards button{
+    padding: 8%;
+    margin: 1%;
+}
+
+.personal, .team, .public, .recent{
+    display: none;
+}
+
+.modalForm{
+    padding: 5%;
+    background-color: #77b9bb;
+}
+
+.modalInput{
+    margin: 2% 0;
+}
+
+#boardInput{
+    width: 80%;
+    border: none;
+    background: transparent !important;
+    color: white;
+    outline: none;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#createBoard{
+    color: #999999;
+    margin: 5% 0;
+}
+
+.modalContent{
+    width: 55%;
+    margin: 10px auto;
+    text-align: left;
+    color: white;
+}
+
+.closeModal{
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    right: 26%;
+    top: 22%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.visibilityDropdown{
+    background: none;
+    color: white;
+    padding: 6px 0;
+    outline: none;
+}
+
+.visibilityDropdown :focus{
+    outline: none;
+    color: white;
+}
